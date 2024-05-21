@@ -15,15 +15,15 @@ working_dir = os.path.dirname(os.path.abspath(__file__))
 
 # loading the saved models
 
-diabetes_model = pickle.load(open('saved_model\diabetes_model.sav', 'rb'))
+diabetes_model = pickle.load(open('diabetes_model.sav', 'rb'))
 
-heart_disease_model = pickle.load(open('saved_model\heart_disease_model.sav', 'rb'))
+heart_disease_model = pickle.load(open('heart_disease_model.sav', 'rb'))
 
-parkinsons_model = pickle.load(open('saved_model\parkinsons_model.sav', 'rb'))
+parkinsons_model = pickle.load(open('parkinsons_model.sav', 'rb'))
 
-lung_model = pickle.load(open('saved_model\lung_model.sav', 'rb'))
+lung_model = pickle.load(open('lung_model.sav', 'rb'))
 
-liver_model = pickle.load(open('saved_model\liver_svm.sav', 'rb'))
+liver_model = pickle.load(open('liver_svm.sav', 'rb'))
 
 # sidebar for navigation
 with st.sidebar:
@@ -90,10 +90,10 @@ if selected == 'HomePage':
     )
 
     # Predefined Images
-    predefined_images = ["images_for_use\heart_image_one.jpg",
-                         "images_for_use\diabetes_image_sec.jpg",
-                         "images_for_use\parkinson_image_three.jpg",
-                         "images_for_use\liver_disease_four.jpg"]
+    predefined_images = ["heart_image_one.jpg",
+                         "diabetes_image_sec.jpg",
+                         "parkinson_image_three.jpg",
+                         "liver_disease_four.jpg"]
     images = [Image.open(image_path) for image_path in predefined_images]
 
     # Display images side by side
@@ -265,7 +265,7 @@ if selected == 'Diabetes Prediction':
         "<h2 style='text-align: center; color: black;text-decoration: underline;'>More on our diabetes prediction model</h2>",
         unsafe_allow_html=True)
     st.markdown("<br>", unsafe_allow_html=True)
-    img_path = "images_for_use/Diabetes_Comparison_of_models.png"
+    img_path = "Diabetes_Comparison_of_models.png"
     st.image(img_path, caption="Diabetes Model comparisons in diffrent methodologies", use_column_width=True)
 
 # Heart Disease Prediction Page
@@ -346,7 +346,7 @@ if selected == 'Heart Disease Prediction':
         "<h2 style='text-align: center; color: black;text-decoration: underline;'>More on our Heart Disease prediction model</h2>",
         unsafe_allow_html=True)
     st.markdown("<br>", unsafe_allow_html=True)
-    img_path = "images_for_use/Heart_Comparison_of_models.png"
+    img_path = "Heart_Comparison_of_models.png"
     st.image(img_path, caption="Heart disease model comparison in diffrent methodologies", use_column_width=True)
 
 # Parkinson's Prediction Page
@@ -455,7 +455,7 @@ if selected == "Parkinsons Prediction":
         "<h2 style='text-align: center; color: black;text-decoration: underline;'>More on Parkinson's prediction model</h2>",
         unsafe_allow_html=True)
     st.markdown("<br>", unsafe_allow_html=True)
-    img_path = "images_for_use/Parkinsons_Comparison_of_models.jpg"
+    img_path = "Parkinsons_Comparison_of_models.jpg"
     st.image(img_path, caption="Parkinsons model comparison in diffrent methodologies", use_column_width=True)
 
 if selected == 'Lung Cancer Prediction':
@@ -604,5 +604,5 @@ if selected == "Liver Disease Prediction":
         "<h2 style='text-align: center; color: black;text-decoration: underline;'>More on our Liver Disease prediction model</h2>",
         unsafe_allow_html=True)
     st.markdown("<br>", unsafe_allow_html=True)
-    img_path = "images_for_use/LiverDisease_Comparison_of_models.jpg"
+    img_path = "LiverDisease_Comparison_of_models.jpg"
     st.image(img_path, caption="Liver disease model comparison in diffrent methodologies", use_column_width=True)
