@@ -194,11 +194,11 @@ if selected == 'HomePage':
 
     # About us
 
-    #st.markdown(
-    #  "<h2 style='text-align: center; color: white; background-color: green;'>About Us</h2>",
-    #   unsafe_allow_html=True
-    #)
-    #st.markdown("<br>", unsafe_allow_html=True)
+    st.markdown(
+      "<h2 style='text-align: center; color: white; background-color: green;'>THANK YOU FOR VISITING US</h2>",
+       unsafe_allow_html=True
+    )
+    st.markdown("<br>", unsafe_allow_html=True)
 
 # Diabetes Prediction
 
